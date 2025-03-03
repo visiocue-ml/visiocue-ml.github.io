@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: 'Visiocue ML Blog',
   description: 'Visiocue GmbH machine learning blog',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://visiocue-ml.github.io',
   siteRepo: 'https://github.com/visiocue-ml/visiocue-ml.github.io',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
