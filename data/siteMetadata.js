@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://visiocue-ml.github.io',
   siteRepo: 'https://github.com/visiocue-ml/visiocue-ml.github.io',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/mlblog.png`,
   mastodon: '',
   email: 'contact@visiocue.com',
   github: 'https://github.com/visiocue',
