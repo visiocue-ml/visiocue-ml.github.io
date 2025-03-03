@@ -13,7 +13,7 @@ const SearchButton = () => {
     return (
       <SearchButtonWrapper
         aria-label="Search"
-        className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 shadow-md"
+        className="h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-gray-100 shadow-md transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
