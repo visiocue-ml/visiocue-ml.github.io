@@ -29,6 +29,8 @@ const Header = () => {
         </div>
       </Link>
       <div className="flex items-center space-x-4 leading-5 sm:-mr-6 sm:space-x-6">
+        
+      <SearchButton />
         <div className="no-scrollbar hidden max-w-40 items-center gap-x-4 overflow-x-auto sm:flex md:max-w-72 lg:max-w-96">
           {headerNavLinks
             .filter((link) => link.href !== '/')
@@ -37,7 +39,7 @@ const Header = () => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="bg-primary-500 hover:bg-primary-600 rounded-fullpx-4 py-2 text-white shadow-sm transition-colors"
+                  className="bg-primary-700 text-sm hover:bg-primary-500 rounded-full px-4 py-2 text-white shadow-sm transition-colors"
                 >
                   {link.title}
                 </Link>
@@ -52,7 +54,6 @@ const Header = () => {
               )
             )}
         </div>
-        <SearchButton />
         <MobileNav />
       </div>
     </header>

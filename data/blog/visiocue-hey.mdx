@@ -8,65 +8,58 @@ summary: "Visiocue GmbH from Berlin is revolutionizing cargo and aviation with a
 
 Visiocue GmbH, based in Berlin and funded by the Beumer group, is transforming the cargo and aviation sectors with state-of-the-art artificial intelligence. Our mission is to safeguard operational efficiency by detecting anomalies in luggage that could disrupt conveyor belt mechanics. By proactively identifying issues before they escalate, we are setting new standards for safety and reliability in baggage handling.
 
-<figure className="mx-auto w-full max-w-[500px] my-8">
-  <svg className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <symbol id="icon-tp" viewBox="0 0 24 24">
-        <path d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5L9 16.2z" fill="#BB86FC"/>
-      </symbol>
-      <symbol id="icon-fp" viewBox="0 0 24 24">
-        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#BB86FC"/>
-      </symbol>
-      <symbol id="icon-fn" viewBox="0 0 24 24">
-        <path d="M1,21h22L12,2L1,21z M13,18h-2v-2h2V18z M13,14h-2v-4h2V14z" fill="#BB86FC"/>
-      </symbol>
-      <symbol id="icon-lidar" viewBox="0 0 64 64">
-        <circle cx="32" cy="32" r="30" stroke="#BB86FC" strokeWidth="4" fill="none"/>
-        <line x1="32" y1="2" x2="32" y2="62" stroke="#BB86FC" strokeWidth="4"/>
-        <line x1="2" y1="32" x2="62" y2="32" stroke="#BB86FC" strokeWidth="4"/>
-      </symbol>
-      <symbol id="icon-rgb" viewBox="0 0 64 64">
-        {/* For RGB, a dark gray background lets the white circle pop */}
-        <rect x="8" y="16" width="48" height="32" rx="4" ry="4" fill="#1C1C2E"/>
-        <circle cx="32" cy="32" r="8" fill="#fff"/>
-      </symbol>
-    </defs>
 
-    <text x="250" y="30" fontSize="24" textAnchor="middle" fill="#fff">
-      System Accuracy: 99%
-    </text>
+<figure className="mx-auto w-full max-w-[600px] my-8">
+  <svg className="w-full h-auto block" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L6,3 z" fill="#fff" />
+      </marker>
+    </defs>
     
-    <g transform="translate(50,50)">
-      <use xlinkHref="#icon-tp" width="24" height="24" />
-      <text x="12" y="40" fontSize="10" textAnchor="middle" fill="#fff">True Positive</text>
+    <g id="sensors">
+      {/* LiDAR – now using the purple tint */}
+      <polygon points="50,50 90,50 100,70 90,90 50,90 40,70" fill="transparent" stroke="#BB86FC" strokeWidth="2"/>
+      <text x="70" y="70" fontSize="10" textAnchor="middle" fill="#fff">LiDAR</text>
+      
+      {/* Camera – a contrasting dark gray with white stroke */}
+      <rect x="30" y="110" width="40" height="30" rx="5" ry="5" fill="transparent" stroke="#BB86FC" strokeWidth="2"/>
+      <text x="50" y="130" fontSize="10" textAnchor="middle" fill="#fff">Camera</text>
     </g>
     
-    <g transform="translate(180,50)">
-      <use xlinkHref="#icon-fp" width="24" height="24" />
-      <text x="12" y="40" fontSize="10" textAnchor="middle" fill="#fff">False Positive</text>
+    <g id="edge" transform="translate(200, 50)">
+      {/* Edge box – using the dark gray to contrast with purple accents elsewhere */}
+      <rect x="0" y="0" width="100" height="100" rx="10" ry="10" fill="transparent" stroke="#fff" strokeWidth="2"/>
+      <text x="50" y="55" fontSize="12" textAnchor="middle" fill="#fff">Edge</text>
     </g>
     
-    <g transform="translate(310,50)">
-      <use xlinkHref="#icon-fn" width="24" height="24" />
-      <text x="12" y="40" fontSize="10" textAnchor="middle" fill="#fff">False Negative</text>
+    <g id="ai" transform="translate(400, 50)">
+      {/* AI/ML – again using the purple tint */}
+      <polygon points="50,0 100,25 100,75 50,100 0,75 0,25" fill="transparent" stroke="#BB86FC" strokeWidth="2"/>
+      <text x="50" y="55" fontSize="12" textAnchor="middle" fill="#fff">AI/ML</text>
     </g>
     
-    <g transform="translate(100,150)">
-      <use xlinkHref="#icon-lidar" width="40" height="40" />
-      <text x="20" y="60" fontSize="10" textAnchor="middle" fill="#fff">LiDAR</text>
+    {/* Connecting arrows */}
+    <line x1="90" y1="80" x2="200" y2="100" stroke="#fff" strokeWidth="2" markerEnd="url(#arrow)"/>
+    <line x1="70" y1="125" x2="200" y2="100" stroke="#fff" strokeWidth="2" markerEnd="url(#arrow)"/>
+    <line x1="300" y1="100" x2="400" y2="100" stroke="#fff" strokeWidth="2" markerEnd="url(#arrow)"/>
+
+    <g id="luggage" transform="translate(100, 250)">
+      {/* Luggage base using a medium gray */}
+      <rect x="0" y="0" width="400" height="20" fill="#444"/>
+      {/* Luggage items – dark gray for contrast */}
+      <rect x="50" y="-40" width="60" height="40" fill="#1C1C2E" stroke="#fff" strokeWidth="2"/>
+      <text x="80" y="-15" fontSize="10" textAnchor="middle" fill="#fff">Luggage</text>
+      
+      <rect x="150" y="-40" width="60" height="40" fill="#1C1C2E" stroke="#fff" strokeWidth="2"/>
+      <text x="180" y="-15" fontSize="10" textAnchor="middle" fill="#fff">Luggage</text>
+      
+      <rect x="250" y="-40" width="60" height="40" fill="#1C1C2E" stroke="#fff" strokeWidth="2"/>
+      <text x="280" y="-15" fontSize="10" textAnchor="middle" fill="#fff">Luggage</text>
     </g>
-    
-    <g transform="translate(250,150)">
-      <use xlinkHref="#icon-rgb" width="40" height="40" />
-      <text x="20" y="60" fontSize="10" textAnchor="middle" fill="#fff">RGB</text>
-    </g>
-    
-    <text x="250" y="280" fontSize="12" textAnchor="middle" fill="#fff">
-      Definitions & Key Components
-    </text>
   </svg>
   <figcaption className="text-center text-white text-[14px] mt-2">
-    Infographic outlining system accuracy and key components: TP, FP, FN, LiDAR sensors, and RGB cameras.
+    Integrated Sensor & AI Analysis for Optimized Luggage Handling
   </figcaption>
 </figure>
 
