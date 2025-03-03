@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Visiocue ML',
   author: 'Visiocue GmbH',
-  headerTitle: 'Visiocue ML Blog',
+  headerTitle: 'Visiocue ML',
   description: 'Visiocue GmbH machine learning blog',
   language: 'en-us',
   theme: 'dark', // system, dark or light
