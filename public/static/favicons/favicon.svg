@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="85" height="85"><svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" version="1.2" viewBox="0 0 3171.4285714285716 3171.4285714285716">
+  <!-- Black background covering the square -->
+  <rect width="100%" height="100%" fill="black"></rect>
+  
+  <!-- Adjusted group translation: originally the group was at y=400 in a 2171-high viewBox.
+       To center the artwork in a 3171.43-high square, we add an extra offset (approximately 533.915)
+       so that the new translation is about 933.915. -->
+  <g transform="translate(0,933.915)">
+    <path d="M1968.8 831.5c-18.4-36.3-38.1-71.2-59.1-104.7-99.8 155-267 293.7-478.8 379.9l70.8 174.1c219.1-89.2 382-255 467.1-449.3z" fill="white"></path>
+    <path d="M1535.3 1043.8c29-16.1 57-33.1 84.1-50.9-186.4-89.3-358.9-275.8-459.6-523.4l-174.1 70.9c104.2 255.9 313 435.4 549.6 503.4z" fill="white"></path>
+    <path d="m1814.6 259.8-70.9-174.1C1494.4 187.2 1317.8 387.9 1246 617c17.4 28.7 35.8 56.2 54.9 82.8 92.7-178.9 274.9-342.8 513.7-440z" fill="white"></path>
+    <path d="M2185.7 821.8c-96.8-237.7-283.7-409.4-499.4-487.1-31.1 18.2-61.1 37.5-89.8 57.6 169.1 96.4 322.4 272.6 415.2 500.4zM1611.2 807.8c-59.9 0-108.3-48.4-108.3-108.2 0-59.9 48.4-108.3 108.3-108.3s108.3 48.4 108.3 108.3c0 59.8-48.4 108.2-108.3 108.2z" fill="white"></path>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
