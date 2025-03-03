@@ -3,6 +3,7 @@
 @plugin '@tailwindcss/typography';
 @source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 /* Core theme configuration */
 @theme {
@@ -84,6 +85,8 @@
 
 @layer utilities {
   .prose {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #fff;
     & a {
       color: var(--color-primary-500);
       &:hover {
