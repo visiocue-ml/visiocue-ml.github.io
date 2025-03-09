@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Visiocue ML',
+  title: 'Visiocue Machine Learning',
   author: 'Visiocue GmbH',
   headerTitle: 'Visiocue ML',
   description: 'Visiocue GmbH machine learning blog',

@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import Image from '@/components/Image'
 
 const MAX_DISPLAY = 5
 
@@ -10,6 +11,24 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        {/* Banner Section */}
+        <div className="flex flex-col md:flex-row mb-8">
+          {posts.slice(0, 2).map((post) => {
+            const image = post.images && post.images.length ? post.images[0] : 'https://picsum.photos/seed/picsum/800/400'
+            return (
+              <div key={post.slug} className="relative flex-1 h-64 md:h-80 overflow-hidden m-1">
+                <Image src={image} alt={post.title} fill className="object-cover" />
+                <div className="absolute inset-0 bg-[#00000090] flex items-center justify-center">
+                  <Link href={`/blog/${post.slug}`} aria-label={`Read post: ${post.title}`}>
+                    <h2 className="text-white text-2xl md:text-3xl font-bold text-center px-4">
+                      {post.title}
+                    </h2>
+                  </Link>
+                </div>
+              </div>
+            )
+          })}
+        </div>
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             Latest

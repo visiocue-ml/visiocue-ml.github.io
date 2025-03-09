@@ -66,6 +66,7 @@ module.exports = () => {
   return plugins.reduce((acc, next) => next(acc), {
     output,
     basePath,
+
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
@@ -87,6 +88,19 @@ module.exports = () => {
           headers: securityHeaders,
         },
       ]
+    },
+    experimental: {
+      turbo: {
+        rules: {
+          '*.svg': {
+            loaders: ['@svgr/webpack'],
+            as: '*.js',
+          },
+        },
+        resolveAlias: {
+          // You can add custom aliases here if needed
+        },
+      }
     },
     webpack: (config, options) => {
       config.module.rules.push({
