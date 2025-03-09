@@ -32,10 +32,18 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
+  const bannerImage = content?.images?.[0] || '/banner.jpg'
 
   return (
     <SectionContainer>
       <ScrollTopAndComment />
+      <div
+        className="w-full h-48 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bannerImage})`,
+          backgroundColor: '#1A1B5F',
+        }}
+      />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">

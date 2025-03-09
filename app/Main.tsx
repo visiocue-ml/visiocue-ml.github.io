@@ -12,29 +12,40 @@ export default function Home({ posts }) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         {/* Banner Section */}
-        <div className="flex flex-col md:flex-row mb-8">
-          {posts.slice(0, 2).map((post) => {
-            const image = post.images && post.images.length ? post.images[0] : 'https://picsum.photos/seed/picsum/800/400'
-            return (
-              <div key={post.slug} className="relative flex-1 h-64 md:h-80 overflow-hidden m-1">
-                <Image src={image} alt={post.title} fill className="object-cover" />
-                <div className="absolute inset-0 bg-[#00000090] flex items-center justify-center">
-                  <Link href={`/blog/${post.slug}`} aria-label={`Read post: ${post.title}`}>
+
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <div className="flex flex-col md:flex-row mb-8">
+            {posts.slice(0, 2).map((post) => {
+              const image = post.images && post.images.length ? post.images[0] : 'https://picsum.photos/seed/picsum/800/400'
+              return (
+                <Link className="relative flex-1 h-64 md:h-80 overflow-hidden m-1" href={`/blog/${post.slug}`} key={post.slug}>
+                  <Image src={image} alt={post.title} fill className="object-cover" />
+                  <p className="absolute inset-0 bg-[#00000090] hover:bg-[#00000060] active:bg-[#00000060] flex items-center justify-center">
                     <h2 className="text-white text-2xl md:text-3xl font-bold text-center px-4">
                       {post.title}
                     </h2>
-                  </Link>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            Latest
+                  </p>
+                </Link>
+              )
+            })}
+          </div >
+          <h1 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-4xl dark:text-gray-100">
+            News @ <a className="text-zinc-200" href="https://visiocue.com">Visiocue</a>
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            The AI for unconveyable luggage and intrusion detection at airports.
+            <button
+              className="inline-flex items-center justify-between max-w-sm rounded-md bg-gray-800 px-4 py-2 text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <span className="pointer-events-none">Search documentation...</span>
+
+              <span
+                className="ml-2 rounded bg-gray-700 px-2 py-1 text-sm text-gray-500"
+              >
+                ⌘K
+              </span>
+            </button>
+
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -88,23 +99,27 @@ export default function Home({ posts }) {
             )
           })}
         </ul>
-      </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base leading-6 font-medium">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="All posts"
-          >
-            All Posts &rarr;
-          </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
+      </div >
+      {
+        posts.length > MAX_DISPLAY && (
+          <div className="flex justify-end text-base leading-6 font-medium">
+            <Link
+              href="/blog"
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="All posts"
+            >
+              All Posts &rarr;
+            </Link>
+          </div>
+        )
+      }
+      {
+        siteMetadata.newsletter?.provider && (
+          <div className="flex items-center justify-center pt-4">
+            <NewsletterForm />
+          </div>
+        )
+      }
     </>
   )
 }

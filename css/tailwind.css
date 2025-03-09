@@ -102,7 +102,7 @@ html {
 
 @layer utilities {
   .prose {
-    font-family: var(--font-open-sans);
+    font-family: var(--font-open-sans) !important;
     color: #fff;
     & a {
       color: var(--color-primary-500);
