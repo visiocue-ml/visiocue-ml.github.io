@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Image from '@/components/Image'
-
+import { CLButton } from '@/components/Comments'
 const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
@@ -32,19 +32,9 @@ export default function Home({ posts }) {
           <h1 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-4xl dark:text-gray-100">
             News @ <a className="text-zinc-200" href="https://visiocue.com">Visiocue</a>
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            The AI for unconveyable luggage and intrusion detection at airports.
-            <button
-              className="inline-flex items-center justify-between max-w-sm rounded-md bg-gray-800 px-4 py-2 text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <span className="pointer-events-none">Search documentation...</span>
-
-              <span
-                className="ml-2 rounded bg-gray-700 px-2 py-1 text-sm text-gray-500"
-              >
-                ⌘K
-              </span>
-            </button>
+          <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
+            The AI for unconveyable luggage and intrusion detection at airports. &nbsp;
+            <CLButton/>
 
           </p>
         </div>
